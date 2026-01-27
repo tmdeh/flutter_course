@@ -1,101 +1,88 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 abstract class TextStyles {
   // Poppins - Bold
-  static const TextStyle titleBold = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle titleBold = GoogleFonts.poppins(
     fontWeight: FontWeight.bold,
     fontSize: 50,
     height: 1.5,
   );
 
-  static const TextStyle headerBold = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle headerBold = GoogleFonts.poppins(
     fontWeight: FontWeight.bold,
     fontSize: 30,
     height: 1.5,
   );
 
-  static const TextStyle largeBold = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle largeBold = GoogleFonts.poppins(
     fontWeight: FontWeight.bold,
     fontSize: 20,
     height: 1.5,
   );
 
-  static const TextStyle mediumBold = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle mediumBold = GoogleFonts.poppins(
     fontWeight: FontWeight.bold,
     fontSize: 18,
     height: 1.5,
   );
 
-  static const TextStyle normalBold = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle normalBold = GoogleFonts.poppins(
     fontWeight: FontWeight.bold,
     fontSize: 16,
     height: 1.5,
   );
 
-  static const TextStyle smallBold = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle smallBold = GoogleFonts.poppins(
     fontWeight: FontWeight.bold,
     fontSize: 14,
     height: 1.5,
   );
 
-  static const TextStyle smallerBold = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle smallerBold = GoogleFonts.poppins(
     fontWeight: FontWeight.bold,
     fontSize: 11,
     height: 1.55,
   );
 
   // Poppins - Regular
-  static const TextStyle titleRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle titleRegular = GoogleFonts.poppins(
     fontWeight: FontWeight.normal,
     fontSize: 50,
     height: 1.5,
   );
 
-  static const TextStyle headerRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle headerRegular = GoogleFonts.poppins(
     fontWeight: FontWeight.normal,
     fontSize: 30,
     height: 1.5,
   );
 
-  static const TextStyle largeRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle largeRegular = GoogleFonts.poppins(
     fontWeight: FontWeight.normal,
     fontSize: 20,
     height: 1.5,
   );
 
-  static const TextStyle mediumRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle mediumRegular = GoogleFonts.poppins(
     fontWeight: FontWeight.normal,
     fontSize: 18,
     height: 1.5,
   );
 
-  static const TextStyle normalRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle normalRegular = GoogleFonts.poppins(
     fontWeight: FontWeight.normal,
     fontSize: 16,
     height: 1.5,
   );
 
-  static const TextStyle smallRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle smallRegular = GoogleFonts.poppins(
     fontWeight: FontWeight.normal,
     fontSize: 14,
     height: 1.5,
   );
 
-  static const TextStyle smallerRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static TextStyle smallerRegular = GoogleFonts.poppins(
     fontWeight: FontWeight.normal,
     fontSize: 11,
     height: 1.55,
