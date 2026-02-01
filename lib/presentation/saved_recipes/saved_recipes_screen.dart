@@ -18,7 +18,9 @@ class SavedRecipesScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: ListView.builder(itemBuilder: (context, index) {
+      body: ListView.builder(
+          itemCount: recipes.length,
+          itemBuilder: (context, index) {
         return Text(recipes[index].toString());
       }),
     );

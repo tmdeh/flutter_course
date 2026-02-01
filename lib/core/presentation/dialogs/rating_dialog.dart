@@ -55,7 +55,7 @@ class _RatingBar extends StatelessWidget {
   final int value;
   final Function onChange;
 
-  const _RatingBar({super.key, required this.value, required this.onChange});
+  const _RatingBar({ required this.value, required this.onChange});
 
   @override
   Widget build(BuildContext context) {

@@ -12,7 +12,6 @@ import 'package:flutter_coursef/data/repository/mock_recipe_repository_impl.dart
 import 'package:flutter_coursef/domain/model/recipe.dart';
 import 'package:flutter_coursef/domain/use_case/get_saved_recipes_use_case.dart';
 import 'package:flutter_coursef/presentation/saved_recipes/saved_recipes_screen.dart';
-import 'package:flutter_coursef/presentation/sign_in/sign_in_screen.dart';
 import 'package:flutter_coursef/ui/text_styles.dart';
 
 void main() {
@@ -36,18 +35,26 @@ class MyApp extends StatelessWidget {
             recipeRepository: MockRecipeRepositoryImpl(),
             bookmarkRepository: MockBookmarkRepositoryImpl(),).execute(),
         builder: (context, snapshot) {
-          if(snapshot.connectionState == ConnectionState.waiting) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           }
 
-          if(snapshot.hasError) {
-            return const Center(child: Text('Error'));
+          if (snapshot.hasError) {
+            return Center(
+              child: Text('에러 발생: ${snapshot.error}'),
+            );
+          }
+
+          if (!snapshot.hasData || snapshot.data!.isEmpty) {
+            return const Center(
+              child: Text('저장된 레시피가 없습니다'),
+            );
           }
 
           final recipes = snapshot.data!;
 
-          return SavedRecipesScreen(recipes: recipes,);
-        }
+          return SavedRecipesScreen(recipes: recipes);
+        },
       )
     );
   }
