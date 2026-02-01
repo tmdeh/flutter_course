@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_coursef/ui/color_styles.dart';
 import 'package:flutter_coursef/ui/text_styles.dart';
+import 'package:flutter_coursef/ui/color_styles.dart';
 
-class BigButton extends StatefulWidget {
-
+class SmallButton extends StatefulWidget {
   final String text;
   final void Function() onPressed;
+  final Color color;
+  final TextStyle? textStyle;
 
-  const BigButton(this.text, this.onPressed,{super.key,});
+  const SmallButton(
+      this.text, {
+        super.key,
+        this.color = ColorStyles.primary100,
+        this.textStyle,
+        required this.onPressed,
+      });
 
   @override
-  State<BigButton> createState() => _BigButtonState();
+  State<SmallButton> createState() => _SmallButtonState();
 }
 
-class _BigButtonState extends State<BigButton> {
 
+class _SmallButtonState extends State<SmallButton> {
   bool isPressed = false;
 
   @override
@@ -37,26 +44,18 @@ class _BigButtonState extends State<BigButton> {
         });
       },
       child: Container(
-        height: 60,
+        height: 37,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: isPressed ? ColorStyles.gray4 : ColorStyles.primary100,
+          color: isPressed ? ColorStyles.gray3 : widget.color,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              width: 114,
-              child: Text(
-                widget.text,
-                style: TextStyles.normalBold.copyWith(
-                color: Colors.white,),
-              ),
-            ),
-            SizedBox(width: 11,),
-            Icon(Icons.arrow_forward,
-              size: 20,
-              color: Colors.white,
+            Text(
+              widget.text,
+              style: (widget.textStyle ?? TextStyles.normalRegular)
+                  .copyWith(color: Colors.white),
             ),
           ],
         ),

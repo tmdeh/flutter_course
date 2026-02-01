@@ -87,4 +87,10 @@ abstract class TextStyles {
     fontSize: 11,
     height: 1.55,
   );
+
+  static TextStyle? largeTextRegular = GoogleFonts.poppins(
+    fontWeight: FontWeight.normal,
+    fontSize: 20,
+    height: 1.5,
+  );
 }
